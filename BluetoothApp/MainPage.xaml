@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BluetoothApp.MainPage">
+
+    <ScrollView>
+        <StackLayout Orientation="Vertical" >
+            <Button x:Name="ScanButton"
+                Text="Scan"
+                Clicked="ScanButton_Clicked"
+                Margin="10" />
+            <ListView x:Name="listView"
+                      ItemSelected="ListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding}" TextColor="CadetBlue" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button x:Name="TurnOnButton"
+                    Text="TurnOn"
+                    Clicked="TurnOnButton_Clicked"
+                    Margin="10" />
+            <Button x:Name="TurnOffButton"
+                    Text="TurnOff"
+                    Clicked="TurnOffButton_Clicked"
+                    Margin="10" />
+            <Button x:Name="DisconnectButton"
+                    Text="Disconnect"
+                    Clicked="DisconnectButton_Clicked"
+                    Margin="10" />
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
